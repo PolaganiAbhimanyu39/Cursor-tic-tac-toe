@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+  text-align: center;
+  width: 100%;
+}
+
+.board {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.board-row:last-child {
+  margin-bottom: 0;
+}
+
+.square {
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 8px;
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #333;
+  line-height: 100px;
+}
+
+.square.x-player {
+  color: #2196F3;
+  border-color: #2196F3;
+}
+
+.square.o-player {
+  color: #f44336;
+  border-color: #f44336;
+}
+
+.square:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.05);
+}
+
+.game-info {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+.game-info ol {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-info button {
+  background: none;
+  border: none;
+  color: #0066cc;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.game-info button:hover {
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.restart-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restart-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.restart-button:active {
+  transform: translateY(0);
+}
